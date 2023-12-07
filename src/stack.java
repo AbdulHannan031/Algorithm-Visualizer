@@ -17,6 +17,7 @@ public class stack extends JFrame {
     }
 
     private void initializeUI() {
+        
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Stack Visualization");
         setLayout(new BorderLayout());
@@ -26,15 +27,25 @@ public class stack extends JFrame {
         setIconImage(im);
         stackTextArea = new JTextArea();
         stackTextArea.setEditable(false);
-        add(new JScrollPane(stackTextArea), BorderLayout.CENTER);
+
+        stackTextArea.setBorder(BorderFactory.createLineBorder(Color.white,2));
+        stackTextArea.setBackground(Color.black);
+        stackTextArea.setForeground(Color.white);
+        JScrollPane scrollArea = new JScrollPane(stackTextArea);
+        JPanel panel=new JPanel();
+        panel.setBackground(Color.black);
+        panel.add(stackTextArea,BorderLayout.CENTER);
+        add(panel, BorderLayout.CENTER);
         JLabel label=new JLabel("   Value :");
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new FlowLayout());
    inputPanel.add(label);
+   label.setForeground(Color.white);
        inputField = new JTextField(10);
         inputPanel.add(inputField);
-
+ inputPanel.setBackground(Color.black);
         JButton pushButton = new JButton("Push");
+        pushButton.setBackground(Color.green);
         pushButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,6 +64,7 @@ public class stack extends JFrame {
         inputPanel.add(pushButton);
 
         JButton popButton = new JButton("Pop");
+        popButton.setBackground(Color.red);
         popButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -63,6 +75,7 @@ public class stack extends JFrame {
         inputPanel.add(popButton);
 
         JButton peekButton = new JButton("Peek");
+        peekButton.setBackground(Color.blue);
         peekButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -104,10 +117,10 @@ public class stack extends JFrame {
 
     private void updateStackText() {
         StringBuilder stackContent = new StringBuilder();
-        stackContent.append("Stack Contents:\n");
+        stackContent.append("Stack Contents\n");
 
         for (int i = top; i >= 0; i--) {
-            stackContent.append(array[i]).append("\n");
+            stackContent.append("           "+array[i]).append("\n");
         }
 
         stackTextArea.setText(stackContent.toString());
