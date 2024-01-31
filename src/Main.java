@@ -10,7 +10,7 @@ public class Main {
     }
 
     private static void createAndShowGUI() {
-        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\kkk\\src\\connection.png");
+        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\visualizer\\src\\connection.png");
         Image im = ic.getImage();
 
         JFrame frame = new JFrame("DSA Algorithm Visualizer");
@@ -20,6 +20,7 @@ public class Main {
         frame.setIconImage(im);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
+        frame.setLocation(100,100);
 
         JPanel panel1 = new JPanel();
         JPanel panel = new JPanel();
@@ -30,21 +31,27 @@ public class Main {
 
         JButton bubbleSortButton = createMenuButton("Bubble Sort", "bubble.png");
         bubbleSortButton.addActionListener(e -> new bubblesort());
+        bubbleSortButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         JButton selectionSortButton = createMenuButton("Selection Sort", "selection.png");
         selectionSortButton.addActionListener(e -> new selectionsort());
+        selectionSortButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         JButton singlyLinkedListButton = createMenuButton("Singly Linked List", "linkedlist.png");
         singlyLinkedListButton.addActionListener(e -> new GU());
+        singlyLinkedListButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         JButton doublyLinkedListButton = createMenuButton("Doubly Linked List", "doublylinkedlist.png");
         doublyLinkedListButton.addActionListener(e -> new GDoublyLinkedList());
+        doublyLinkedListButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         JButton stackButton = createMenuButton("Stack", "stack.png");
         stackButton.addActionListener(e -> new stack());
+        stackButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         JButton queueButton = createMenuButton("Queue", "queue.png");
         queueButton.addActionListener(e -> new QueueVisualizationGUI());
+        queueButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         panel.add(bubbleSortButton);
         panel.add(selectionSortButton);

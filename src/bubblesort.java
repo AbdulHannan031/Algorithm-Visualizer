@@ -16,7 +16,7 @@ public class bubblesort extends Thread {
             ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\kkk\\src\\connection.png");
             Image im = ic.getImage();
             frame.setIconImage(im);
-            JPanel mainPanel = new JPanel(); // Main panel to center content
+            JPanel mainPanel = new JPanel();
             JPanel panel = new JPanel();
             JPanel panel1 = new JPanel();
             JButton start = new JButton("Start");
@@ -88,7 +88,7 @@ public class bubblesort extends Thread {
 
                 for (int i = 0; i < 5; i++) {
                     for (int j = 0; j < 4 - i; j++) {
-                        buttons[j+1].setBackground(Color.cyan);
+
                         buttons[j + 1].setBackground(Color.cyan);
                         if (array[j] > array[j + 1]) {
                             int temp = array[j];
@@ -96,7 +96,7 @@ public class bubblesort extends Thread {
                             array[j + 1] = temp;
                             updateButtons(array, j, j + 1);
                             try {
-                                sleep(3000);
+                                sleep(1000);
                             } catch (InterruptedException ex) {
                                 throw new RuntimeException(ex);
                             }

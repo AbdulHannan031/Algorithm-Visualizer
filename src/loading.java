@@ -4,10 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class loading {
-
     public static void main(String[] args) {
-         LoadingScreen obj=new LoadingScreen();
-         obj.startLoading();
+        LoadingScreen obj=new LoadingScreen();
+        obj.startLoading();
     }
 }
 

@@ -179,7 +179,7 @@ class GDoublyLinkedList {
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.setSize(1200, 400);
-        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\kkk\\src\\connection.png");
+        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\visualizer\\src\\connection.png");
         Image im = ic.getImage();
         frame.setIconImage(im);
         JButton button1 = new JButton("Insert at Head");

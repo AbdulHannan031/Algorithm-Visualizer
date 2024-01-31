@@ -18,7 +18,7 @@ public class QueueVisualizationGUI extends JFrame {
         setTitle("Queue Visualization");
         setLayout(new BorderLayout());
         setSize(500, 300);
-        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\kkk\\src\\connection.png");
+        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\visualizer\\src\\connection.png");
         Image im = ic.getImage();
         setIconImage(im);
         queue = new LinkedList<>();

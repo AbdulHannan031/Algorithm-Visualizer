@@ -21,20 +21,31 @@ public class stack extends JFrame {
         setTitle("Stack Visualization");
         setLayout(new BorderLayout());
         setSize(400, 300);
-        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\kkk\\src\\connection.png");
+        ImageIcon ic = new ImageIcon("C:\\Users\\Toshiba\\Desktop\\visualizer\\src\\connection.png");
         Image im = ic.getImage();
         setIconImage(im);
+         JPanel panel=new JPanel();
         stackTextArea = new JTextArea();
         stackTextArea.setEditable(false);
-        add(new JScrollPane(stackTextArea), BorderLayout.CENTER);
+        stackTextArea.setAlignmentX(Component.CENTER_ALIGNMENT);
+         stackTextArea.setBackground(Color.black);
+         stackTextArea.setForeground(Color.white);
+         panel.setBackground(Color.black);
+        panel.add(stackTextArea);
+        add(panel,BorderLayout.CENTER);
         JLabel label=new JLabel("   Value :");
+        label.setForeground(Color.white);
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new FlowLayout());
-   inputPanel.add(label);
+         inputPanel.add(label);
        inputField = new JTextField(10);
+       inputPanel.setBackground(Color.black);
+
         inputPanel.add(inputField);
 
         JButton pushButton = new JButton("Push");
+        pushButton.setBackground(Color.decode("#355E3B"));
+        pushButton.setForeground(Color.white);
         pushButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,6 +64,8 @@ public class stack extends JFrame {
         inputPanel.add(pushButton);
 
         JButton popButton = new JButton("Pop");
+        popButton.setBackground(Color.RED);
+        popButton.setForeground(Color.white);
         popButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -63,6 +76,8 @@ public class stack extends JFrame {
         inputPanel.add(popButton);
 
         JButton peekButton = new JButton("Peek");
+        peekButton.setBackground(Color.decode("#355E3B"));
+        peekButton.setForeground(Color.white);
         peekButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -107,7 +122,7 @@ public class stack extends JFrame {
         stackContent.append("Stack Contents:\n");
 
         for (int i = top; i >= 0; i--) {
-            stackContent.append(array[i]).append("\n");
+            stackContent.append("           "+array[i]).append("\n");
         }
 
         stackTextArea.setText(stackContent.toString());

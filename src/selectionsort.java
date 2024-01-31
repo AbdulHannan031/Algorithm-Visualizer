@@ -84,22 +84,8 @@ public class selectionsort extends Thread {
 
             Random random = new Random();
 
-            for (int i = 0; i < 5 - 1; i++) {
-                for (int j = i + 1; j < 5; j++) {
-                    if (array[i] > array[j]) {
-                        int temp = array[j];
-                        array[j] = array[i];
-                        array[i] = temp;
-                        updateButtons(array, i, j);
-                        try {
-                            sleep(1000);
-                        } catch (InterruptedException ex) {
-                            throw new RuntimeException(ex);
-                        }
-                    }
-                }
-                resetButtonColors();
-            }
+
+
 
             JOptionPane.showMessageDialog(null, "Sorting completed!");
         }
