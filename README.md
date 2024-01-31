@@ -1,16 +1,16 @@
-Algorithm Visualizer
+**Algorithm Visualizer**
 
 
 This project is a Java application that [Have multiple viualization of diffrent algorithms such as bubble sort selection sort singly link list etc].
-
+**
 Getting Started
-
+**
 
 Follow these steps to set up and run the project on your local machine.
 
 
 
-Prerequisites
+**Prerequisites**
 
 
 Make sure you have the following installed on your system:
@@ -21,7 +21,7 @@ Java Development Kit (JDK)
 Intellij Idea (IDE)
 
 
-Installation
+**Installation**
 
 
 Download the project .
@@ -40,10 +40,10 @@ Locate the loading.java file and open it.
 If JDK is not set up, configure it manually in your IDE.
 
 
-Running the Application
+**Running the Application**
 
 
-Option 1: Run from IDE
+**Option 1: Run from IDE**
 
 
 In your IDE, locate the loading.java file.
@@ -52,7 +52,7 @@ In your IDE, locate the loading.java file.
 Right-click on the file and select "Run loadin 'main' "  to execute the program.
 
 
-Option 2: Run Executable File
+**Option 2: Run Executable File**
 
 
 Check if there is an executable file in the project folder (e.g., project-executable.jar).
